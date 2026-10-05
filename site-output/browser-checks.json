@@ -1,0 +1,182 @@
+[
+  {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "height": 5448,
+    "h1Count": 1,
+    "brokenImages": [],
+    "fontDisplay": true,
+    "fontBody": true,
+    "badAnchors": [],
+    "disabledLinks": 11,
+    "externalLinks": [],
+    "sectionPositions": [
+      {
+        "id": "inicio",
+        "y": 121,
+        "h": 1100
+      },
+      {
+        "id": "manifesto",
+        "y": 1221,
+        "h": 630
+      },
+      {
+        "id": "minha-trajetoria",
+        "y": 1851,
+        "h": 956
+      },
+      {
+        "id": "solucoes",
+        "y": 2807,
+        "h": 859
+      },
+      {
+        "id": "minha-abordagem",
+        "y": 3666,
+        "h": 828
+      },
+      {
+        "id": "contato",
+        "y": 4494,
+        "h": 680
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 7533,
+    "h1Count": 1,
+    "brokenImages": [],
+    "fontDisplay": true,
+    "fontBody": true,
+    "badAnchors": [],
+    "disabledLinks": 11,
+    "externalLinks": [],
+    "sectionPositions": [
+      {
+        "id": "inicio",
+        "y": 99,
+        "h": 1068
+      },
+      {
+        "id": "manifesto",
+        "y": 1167,
+        "h": 979
+      },
+      {
+        "id": "minha-trajetoria",
+        "y": 2146,
+        "h": 1159
+      },
+      {
+        "id": "solucoes",
+        "y": 3305,
+        "h": 1199
+      },
+      {
+        "id": "minha-abordagem",
+        "y": 4504,
+        "h": 1516
+      },
+      {
+        "id": "contato",
+        "y": 6020,
+        "h": 1073
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 360,
+    "scrollWidth": 360,
+    "height": 7764,
+    "h1Count": 1,
+    "brokenImages": [],
+    "fontDisplay": true,
+    "fontBody": true,
+    "badAnchors": [],
+    "disabledLinks": 11,
+    "externalLinks": [],
+    "sectionPositions": [
+      {
+        "id": "inicio",
+        "y": 99,
+        "h": 1041
+      },
+      {
+        "id": "manifesto",
+        "y": 1140,
+        "h": 1043
+      },
+      {
+        "id": "minha-trajetoria",
+        "y": 2183,
+        "h": 1153
+      },
+      {
+        "id": "solucoes",
+        "y": 3336,
+        "h": 1330
+      },
+      {
+        "id": "minha-abordagem",
+        "y": 4667,
+        "h": 1571
+      },
+      {
+        "id": "contato",
+        "y": 6237,
+        "h": 1067
+      }
+    ],
+    "errors": []
+  },
+  {
+    "width": 768,
+    "scrollWidth": 768,
+    "height": 6345,
+    "h1Count": 1,
+    "brokenImages": [],
+    "fontDisplay": true,
+    "fontBody": true,
+    "badAnchors": [],
+    "disabledLinks": 11,
+    "externalLinks": [],
+    "sectionPositions": [
+      {
+        "id": "inicio",
+        "y": 109,
+        "h": 1229
+      },
+      {
+        "id": "manifesto",
+        "y": 1338,
+        "h": 708
+      },
+      {
+        "id": "minha-trajetoria",
+        "y": 2046,
+        "h": 840
+      },
+      {
+        "id": "solucoes",
+        "y": 2886,
+        "h": 931
+      },
+      {
+        "id": "minha-abordagem",
+        "y": 3817,
+        "h": 1075
+      },
+      {
+        "id": "contato",
+        "y": 4892,
+        "h": 1151
+      }
+    ],
+    "errors": []
+  }
+]

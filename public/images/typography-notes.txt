@@ -1,0 +1,1 @@
+As quatro palavras decorativas foram convertidas em contornos vetoriais a partir da tipografia usada no PDF aprovado. Não requerem redistribuição de um programa de fonte. Fontes principais: Noto Serif Display e Montserrat, com licenças OFL em public/fonts/licenses. A versão oblíqua foi adaptada e renomeada para preservar a composição do PDF.
