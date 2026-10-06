@@ -357,6 +357,37 @@ img { display: block; max-width: 100%; height: auto; }
   .contact-monogram { right: calc((1440px - 100vw) / 2 + 14px); }
 }
 
+/* Telas pequenas: texto à esquerda e a Isa sempre ao lado, à direita */
+@media (max-width: 979px) {
+  .header-inner { gap: 12px; }
+  .brand { width: min(192px, 62vw); flex-shrink: 1; }
+  .hero-stage { display: block; min-height: 0; }
+  .hero-copy { order: 0; width: 53%; max-width: none; margin: 0; padding: clamp(32px, 6vw, 56px) 0 clamp(80px, 19vw, 170px) var(--gutter); }
+  .hero .eyebrow { white-space: normal; max-width: none; font-size: clamp(8px, 2.1vw, 12px); letter-spacing: 1px; line-height: 1.7; }
+  .hero h1 { margin-top: clamp(14px, 3vw, 24px); font-size: clamp(21px, 5.7vw, 46px); line-height: 1.2; letter-spacing: -.3px; }
+  .hero-description { width: 100%; max-width: none; margin-top: clamp(14px, 3vw, 26px); font-size: clamp(12.5px, 2.45vw, 17px); line-height: 1.6; }
+  .hero .button { min-width: 0; min-height: 46px; margin-top: clamp(18px, 3.5vw, 28px); padding: 12px 16px; gap: 10px; font-size: 10px; white-space: nowrap; }
+  .hero .button svg { width: 20px; height: 20px; }
+  .hero-portrait { order: 0; position: absolute; top: auto; left: auto; right: -2%; bottom: auto; top: clamp(24px, 6vw, 60px); width: 48%; margin: 0; -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 97%); mask-image: linear-gradient(to bottom, #000 62%, transparent 97%); }
+  .hero-monogram { top: 18px; right: 8px; bottom: auto; width: clamp(60px, 14vw, 150px); z-index: 0; }
+  .hero-wave { height: clamp(70px, 16vw, 200px); }
+
+  .contact-stage { display: block; min-height: 0; }
+  .contact-copy { width: 55%; max-width: none; margin: 0; padding: clamp(36px, 7vw, 60px) 0 clamp(36px, 7vw, 60px) var(--gutter); }
+  .contact h2 { margin-top: 14px; font-size: clamp(20px, 5.2vw, 39px); line-height: 1.25; }
+  .contact-description { margin-top: clamp(14px, 3vw, 24px); font-size: clamp(12.5px, 2.45vw, 18px); line-height: 1.6; }
+  .contact-support { margin-top: 12px; }
+  .contact .button { min-width: 0; min-height: 46px; margin-top: clamp(18px, 3.5vw, 28px); padding: 12px 16px; gap: 10px; font-size: 10px; white-space: nowrap; }
+  .contact .button svg { width: 20px; height: 20px; }
+  .contact-photo { order: 0; position: absolute; top: 0; right: 0; bottom: auto; width: 47%; height: 100%; margin: 0; object-fit: cover; object-position: 62% top; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 28px), linear-gradient(to right, transparent, #000 28%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent, #000 28px), linear-gradient(to right, transparent, #000 28%); mask-composite: intersect; }
+  .contact-monogram { top: 18px; right: 12px; bottom: auto; width: clamp(56px, 12vw, 120px); }
+}
+
+@media (max-width: 340px) {
+  .hero .button, .contact .button { white-space: normal; min-height: 44px; }
+  .hero .button svg, .contact .button svg { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
