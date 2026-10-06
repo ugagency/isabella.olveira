@@ -67,28 +67,7 @@ export default function Home() {
               <p className="solutions-description">{content.solutions.description}</p>
               {content.solutions.items.map(item => <article key={item.id} id={item.id} className="solution-row">
                 <span className="solution-icon"><Icon name={item.icon} /></span>
-                <div><h3>{item.title}</h3><p>{item.description}</p></div>
-                <ConfigurableLink href={siteConfig.whatsapp} className="solution-link" label={item.title}><Icon name="arrow" /></ConfigurableLink>
-              </article>)}
-            </div>
-          </div>
-        </section>
-
-        <section id="produtos" className="products" aria-labelledby="products-title">
-          <div className="products-inner">
-            <p className="eyebrow">Produtos</p>
-            <h2 id="products-title">{content.products.title}</h2>
-            <p className="products-description">{content.products.description}</p>
-            <div className="products-list">
-              {content.products.items.map(item => <article key={item.id} className="product-card">
-                <div className="product-cover">
-                  <Image src={item.image} width={800} height={1200} alt={item.alt} style={{ objectPosition: item.position }} sizes="(max-width: 767px) 36vw, 312px" />
-                </div>
-                <div className="product-body">
-                  <span className="product-badge">Em breve</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
+                <div><span className="soon-badge">Em breve</span><h3>{item.title}</h3><p>{item.description}</p></div>
               </article>)}
             </div>
           </div>

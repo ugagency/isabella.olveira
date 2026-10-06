@@ -21,15 +21,6 @@ export const content = {
       { title: "Conteúdos e formações", description: "Palestras, workshops e programas sob medida para impulsionar o desenvolvimento de pessoas.", icon: "book", id: "conteudos" },
     ],
   },
-  products: {
-    title: "Novos produtos a caminho.",
-    description: "Estou preparando materiais e programas para apoiar você em diferentes momentos da sua jornada.",
-    items: [
-      { id: "produto-1", title: "Produto 01", description: "Novidade em preparação. Em breve, mais detalhes por aqui.", image: "/images/product-1.webp", position: "50% 8%", alt: "Isabella Oliveira sorrindo, de blazer marrom e camisa branca" },
-      { id: "produto-2", title: "Produto 02", description: "Novidade em preparação. Em breve, mais detalhes por aqui.", image: "/images/product-2.webp", position: "50% 30%", alt: "Isabella Oliveira escrevendo em um caderno, de óculos e camisa verde oliva" },
-      { id: "produto-3", title: "Produto 03", description: "Novidade em preparação. Em breve, mais detalhes por aqui.", image: "/images/product-3.webp", position: "50% 0%", alt: "Isabella Oliveira sorrindo, com um notebook nas mãos e vestido branco" },
-    ],
-  },
   approach: {
     subtitle: "Experiência, reflexão e ação para desenvolver pessoas.",
     pillars: [
