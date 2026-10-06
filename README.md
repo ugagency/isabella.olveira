@@ -55,11 +55,8 @@ Depois de preencher `siteUrl` com o domínio real, confirmar os links e concluir
 
 Edite `config/content.ts`:
 
-- Pilar **Clareza e direção**: `[NÃO DEFINIDO]`.
-- Título do CTA final: o anterior foi mantido em `app/page.tsx`, com a marca `REVISAR · [NÃO DEFINIDO]`. Após receber a nova frase, substitua o título e limpe `content.contact.pending`.
-- Textos dos três serviços: preservados até a nova copy da Isabella.
-
-O ano 2024 no rodapé foi mantido conforme o material aprovado.
+- Textos dos três serviços e do parágrafo "Sobre mim": preservados até a nova copy da Isabella.
+- Seção **Produtos**: nomes, descrições e links provisórios, com o selo "Em breve".
 
 ## Arquivos principais
 

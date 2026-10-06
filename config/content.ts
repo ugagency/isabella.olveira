@@ -34,12 +34,14 @@ export const content = {
     subtitle: "Experiência, reflexão e ação para desenvolver pessoas.",
     pillars: [
       { title: "Pessoas e contexto", description: "Compreender o momento, os desafios e os objetivos de cada pessoa é o ponto de partida para um desenvolvimento que faça sentido.", icon: "person" },
-      { title: "Clareza e direção", description: "Definir prioridades, escolher o próximo passo e alinhar as ações aos objetivos, para que o desenvolvimento tenha direção e consistência.", icon: "target" },
+      { title: "Clareza e direção", description: "Conectar objetivos de carreira, competências e desafios do negócio para definir prioridades e orientar decisões.", icon: "target" },
       { title: "Aplicação prática", description: "Transformar reflexão em atitudes, conversas e práticas que possam ser aplicadas aos desafios reais do trabalho.", icon: "leaf" },
       { title: "Alta Performance", description: "Acompanhar aprendizados, reconhecer avanços e ajustar o caminho para fortalecer autonomia e sustentar o desenvolvimento.", icon: "chart" },
     ],
   },
   contact: {
-    description: "Uma conversa inicial para compreender seu momento, seus objetivos e avaliar qual caminho faz mais sentido para você ou sua empresa.",
+    title: "Qual próximo passo você quer construir?",
+    description: "Na sua carreira, na sua liderança ou na sua empresa, o desenvolvimento começa por compreender o desafio e definir uma direção.",
+    support: "Agende uma conversa inicial para compartilhar seu momento, seus objetivos e entender qual solução faz sentido para você ou sua empresa.",
   },
 } as const;

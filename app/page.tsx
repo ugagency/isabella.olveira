@@ -20,7 +20,7 @@ export default function Home() {
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div className="hero-stage">
             <Monogram className="hero-monogram" />
-            <Image src="/images/hero-isabella.webp" width={640} height={848} alt="Isabella Oliveira sorrindo, com camisa verde oliva" className="hero-portrait" preload unoptimized sizes="(max-width: 767px) 100vw, 56vw" />
+            <Image src="/images/hero-isabella.webp" width={1004} height={1567} alt="Isabella Oliveira sorrindo, de óculos e camisa verde oliva" className="hero-portrait" preload unoptimized sizes="(max-width: 767px) 100vw, 56vw" />
             <div className="hero-copy">
               <p className="eyebrow">{content.hero.eyebrow}</p>
               <h1 id="hero-title"><span>Desenvolver pessoas.</span>{" "}<span>Fortalecer <em>lideranças.</em></span>{" "}<span>Construir resultados</span>{" "}<span>que permanecem.</span></h1>
@@ -116,8 +116,9 @@ export default function Home() {
             <Monogram className="contact-monogram" />
             <div className="contact-copy">
               <p className="eyebrow">Vamos juntos?</p>
-              <h2 id="contact-title">Liderança é uma escolha.<br className="desktop-break" />{" "}Vamos torná-la <em>um diferencial</em><br className="desktop-break" />{" "}na sua vida e no seu negócio.</h2>
+              <h2 id="contact-title">{content.contact.title}</h2>
               <p className="contact-description">{content.contact.description}</p>
+              <p className="contact-description contact-support">{content.contact.support}</p>
               <ContactButton olive />
             </div>
           </div>
