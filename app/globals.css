@@ -38,7 +38,7 @@ img { display: block; max-width: 100%; height: auto; }
 .skip-link { position: absolute; top: -80px; left: 20px; z-index: 50; padding: 14px 20px; background: var(--color-coffee); color: white; }
 .skip-link:focus { top: 12px; }
 .eyebrow { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; line-height: 1.8; color: var(--muted); }
-.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 56px; min-width: 248px; border: 0; border-radius: 0 32px 32px 0; padding: 16px 25px 16px 23px; background: var(--color-caramel); color: #f1efec; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .65px; line-height: 1.5; transition: background-color .2s ease, transform .2s ease; }
+.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 56px; min-width: 248px; border: 0; border-radius: 32px; padding: 16px 25px 16px 23px; background: var(--color-caramel); color: #f1efec; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .65px; line-height: 1.5; transition: background-color .2s ease, transform .2s ease; }
 .button svg { width: 25px; height: 25px; flex-shrink: 0; }
 .button[href]:hover { background: #976848; transform: translateX(3px); }
 .button-olive { background: var(--color-olive); }
@@ -133,12 +133,12 @@ img { display: block; max-width: 100%; height: auto; }
 .footer { background: var(--color-paper); padding: 36px var(--gutter) 47px; }
 .footer-inner { max-width: 1292px; margin: auto; }
 .footer-top { display: flex; align-items: center; gap: 30px; padding-bottom: 38px; min-height: 136px; }
-.footer-brand { width: 225px; flex-shrink: 0; }
+.footer-brand { width: 170px; flex-shrink: 0; }
 .footer-tagline { font-family: var(--font-display); font-size: 17px; line-height: 1.4; }
 .footer-nav { display: flex; gap: 20px; align-items: center; margin-left: auto; font-size: 11px; text-transform: uppercase; }
 .social-links { display: flex; align-items: center; gap: 13px; margin-left: auto; }
-.social-links a, .social-links button { color: var(--color-caramel); width: 28px; height: 44px; display: flex; align-items: center; justify-content: center; border: none; background: none; padding: 0; }
-.social-links svg { width: 26px; height: 26px; }
+.social-links a, .social-links button { color: var(--color-caramel); width: 36px; height: 44px; display: flex; align-items: center; justify-content: center; border: none; background: none; padding: 0; }
+.social-links svg { width: 32px; height: 32px; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 24px; padding-top: 32px; border-top: 1px solid var(--line); font-size: 13px; line-height: 1.7; color: var(--muted); }
 .footer-bottom p:last-child { text-transform: uppercase; font-size: 12px; }
 
@@ -262,13 +262,18 @@ img { display: block; max-width: 100%; height: auto; }
   .manifesto-description { font-size: 16px; line-height: 1.7; margin-top: 28px; }
   .section-wave { height: 58px; }
   .wave-top { top: -43px; }
-  .about-inner { display: flex; flex-direction: column; padding: 44px 25px 80px; gap: 50px; min-height: 0; }
-  .about-photos { height: clamp(440px, 121vw, 640px); min-height: 0; width: 100%; max-width: 540px; margin: auto; }
+  .about-inner { display: flex; flex-direction: column; align-items: center; padding: 44px 25px 80px; gap: 0; min-height: 0; }
+  .about-copy { display: contents; }
+  .about-inner .eyebrow, .about h2, .about-copy > p:not(.eyebrow), .about-photos { width: 100%; max-width: 540px; }
+  .about-inner .eyebrow { order: 0; }
+  .about h2 { order: 1; }
+  .about-photos { order: 2; }
+  .about-copy > p:not(.eyebrow) { order: 3; }
+  .about-photos { height: clamp(440px, 121vw, 640px); min-height: 0; width: 100%; max-width: 540px; margin: 40px 0 0; }
   .about-main-photo { left: 34%; width: 66%; top: 30px; }
   .about-reading-photo { left: 0; top: auto; bottom: 0; width: 47%; }
   .script-words { left: 1px; top: 45px; font-size: clamp(24px, 6.3vw, 33px); }
   .script-words i { width: 35px; margin-top: 20px; margin-left: 5px; }
-  .about-copy { padding: 0; max-width: 540px; margin: auto; }
   .about h2 { margin-top: 20px; font-size: clamp(36px, 9.3vw, 48px); line-height: 1.2; }
   .about-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.7; margin-top: 28px; }
   .about .button { min-width: 290px; margin-top: 28px; }
@@ -305,11 +310,11 @@ img { display: block; max-width: 100%; height: auto; }
   .contact-monogram { width: 100px; right: 20px; top: auto; bottom: 280px; }
   .footer { padding: 38px 25px 34px; }
   .footer-top { flex-wrap: wrap; padding-bottom: 31px; gap: 24px; }
-  .footer-brand { width: 205px; }
+  .footer-brand { width: 150px; }
   .footer-tagline { font-size: 16px; width: 100%; margin-top: -6px; }
   .footer-nav { margin: 0; flex-wrap: wrap; column-gap: 21px; row-gap: 15px; width: 100%; font-size: 11px; }
   .social-links { gap: 17px; }
-  .social-links a, .social-links button { width: 32px; }
+  .social-links a, .social-links button { width: 38px; }
   .footer-bottom { flex-direction: column; gap: 15px; padding-top: 27px; font-size: 12px; }
   .footer-bottom p:last-child { font-size: 11px; }
 }
@@ -357,30 +362,34 @@ img { display: block; max-width: 100%; height: auto; }
   .contact-monogram { right: calc((1440px - 100vw) / 2 + 14px); }
 }
 
-/* Telas pequenas: texto à esquerda e a Isa sempre ao lado, à direita */
+/* Telas pequenas: a Isa sempre ao lado do texto; o texto longo contorna a foto */
 @media (max-width: 979px) {
   .header-inner { gap: 12px; }
   .brand { width: min(192px, 62vw); flex-shrink: 1; }
-  .hero-stage { display: block; min-height: 0; }
-  .hero-copy { order: 0; width: 53%; max-width: none; margin: 0; padding: clamp(32px, 6vw, 56px) 0 clamp(80px, 19vw, 170px) var(--gutter); }
-  .hero .eyebrow { white-space: normal; max-width: none; font-size: clamp(8px, 2.1vw, 12px); letter-spacing: 1px; line-height: 1.7; }
-  .hero h1 { margin-top: clamp(14px, 3vw, 24px); font-size: clamp(21px, 5.7vw, 46px); line-height: 1.2; letter-spacing: -.3px; }
-  .hero-description { width: 100%; max-width: none; margin-top: clamp(14px, 3vw, 26px); font-size: clamp(12.5px, 2.45vw, 17px); line-height: 1.6; }
-  .hero .button { min-width: 0; min-height: 46px; margin-top: clamp(18px, 3.5vw, 28px); padding: 12px 16px; gap: 10px; font-size: 10px; white-space: nowrap; }
+  .hero-stage { display: grid; grid-template-columns: minmax(0, 1fr) 46%; column-gap: 12px; align-content: start; min-height: 0; padding: clamp(32px, 6vw, 56px) var(--gutter) clamp(80px, 19vw, 170px); }
+  .hero-copy { display: contents; }
+  .hero-portrait { position: static; float: none; order: 0; grid-column: 2; grid-row: 1 / span 2; align-self: start; width: calc(100% + var(--gutter)); max-width: none; margin: 0 calc(-1 * var(--gutter)) 0 0; -webkit-mask-image: linear-gradient(to bottom, #000 66%, transparent 98%); mask-image: linear-gradient(to bottom, #000 66%, transparent 98%); }
+  .hero .eyebrow { grid-column: 1; grid-row: 1; white-space: normal; max-width: none; font-size: clamp(8px, 2.1vw, 12px); letter-spacing: 1px; line-height: 1.7; }
+  .hero h1 { grid-column: 1; grid-row: 2; margin-top: clamp(14px, 3vw, 24px); font-size: clamp(21px, 5.7vw, 46px); line-height: 1.2; letter-spacing: -.3px; }
+  .hero-description { grid-column: 1 / -1; grid-row: 4; width: 100%; max-width: 560px; justify-self: center; text-align: center; margin-top: clamp(16px, 3.5vw, 26px); font-size: clamp(13px, 2.6vw, 17px); line-height: 1.6; }
+  .hero .button { grid-column: 1 / -1; grid-row: 3; justify-self: center; min-width: 0; min-height: 46px; margin-top: clamp(20px, 4vw, 32px); padding: 12px 16px; gap: 10px; font-size: 10px; white-space: nowrap; }
   .hero .button svg { width: 20px; height: 20px; }
-  .hero-portrait { order: 0; position: absolute; top: auto; left: auto; right: -2%; bottom: auto; top: clamp(24px, 6vw, 60px); width: 48%; margin: 0; -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 97%); mask-image: linear-gradient(to bottom, #000 62%, transparent 97%); }
   .hero-monogram { top: 18px; right: 8px; bottom: auto; width: clamp(60px, 14vw, 150px); z-index: 0; }
   .hero-wave { height: clamp(70px, 16vw, 200px); }
 
   .contact-stage { display: block; min-height: 0; }
-  .contact-copy { width: 55%; max-width: none; margin: 0; padding: clamp(36px, 7vw, 60px) 0 clamp(36px, 7vw, 60px) var(--gutter); }
+  .contact-copy { width: 50%; max-width: none; margin: 0; padding: clamp(36px, 7vw, 60px) 0 clamp(36px, 7vw, 60px) var(--gutter); }
   .contact h2 { margin-top: 14px; font-size: clamp(20px, 5.2vw, 39px); line-height: 1.25; }
   .contact-description { margin-top: clamp(14px, 3vw, 24px); font-size: clamp(12.5px, 2.45vw, 18px); line-height: 1.6; }
   .contact-support { margin-top: 12px; }
   .contact .button { min-width: 0; min-height: 46px; margin-top: clamp(18px, 3.5vw, 28px); padding: 12px 16px; gap: 10px; font-size: 10px; white-space: nowrap; }
   .contact .button svg { width: 20px; height: 20px; }
-  .contact-photo { order: 0; position: absolute; top: 0; right: 0; bottom: auto; width: 47%; height: 100%; margin: 0; object-fit: cover; object-position: 62% top; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 28px), linear-gradient(to right, transparent, #000 28%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent, #000 28px), linear-gradient(to right, transparent, #000 28%); mask-composite: intersect; }
+  .contact-photo { order: 0; position: absolute; top: 0; right: 0; bottom: auto; width: 56%; height: 100%; margin: 0; object-fit: cover; object-position: 20% top; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 clamp(28px, 8vw, 64px)), linear-gradient(to right, transparent, #000 15%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent, #000 clamp(28px, 8vw, 64px)), linear-gradient(to right, transparent, #000 15%); mask-composite: intersect; }
   .contact-monogram { top: 18px; right: 12px; bottom: auto; width: clamp(56px, 12vw, 120px); }
+}
+
+@media (max-width: 360px) {
+  .contact-photo { width: 60%; object-position: 40% top; }
 }
 
 @media (max-width: 340px) {

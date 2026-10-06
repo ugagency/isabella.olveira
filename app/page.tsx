@@ -11,6 +11,11 @@ function Monogram({ className = "" }: { className?: string }) {
   return <Image src="/images/monogram-areia.svg" alt="" width={996} height={1106} className={className} unoptimized aria-hidden="true" />;
 }
 
+function Highlighted({ text, highlight }: { text: string; highlight: string }) {
+  const [before, after] = text.split(highlight);
+  return <>{before}<em>{highlight}</em>{after}</>;
+}
+
 export default function Home() {
   return (
     <>
@@ -35,7 +40,7 @@ export default function Home() {
           <div className="manifesto-inner">
             <Monogram className="manifesto-monogram" />
             <p className="eyebrow">{content.manifesto.eyebrow}</p>
-            <h2 id="manifesto-title">{content.manifesto.title}</h2>
+            <h2 id="manifesto-title"><Highlighted text={content.manifesto.title} highlight={content.manifesto.highlight} /></h2>
             <p className="manifesto-description">{content.manifesto.description}</p>
           </div>
         </section>
@@ -61,7 +66,7 @@ export default function Home() {
           <div className="solutions-inner">
             <div className="solutions-heading">
               <p className="eyebrow">Como posso ajudar</p>
-              <h2 id="solutions-title">{content.solutions.title}</h2>
+              <h2 id="solutions-title"><Highlighted text={content.solutions.title} highlight={content.solutions.highlight} /></h2>
             </div>
             <div className="solutions-list">
               <p className="solutions-description">{content.solutions.description}</p>
@@ -77,7 +82,7 @@ export default function Home() {
           <SectionWave position="top" />
           <div className="approach-inner">
             <p className="eyebrow">Meu método</p>
-            <h2 id="approach-title">Minha abordagem.</h2>
+            <h2 id="approach-title">Minha <em>abordagem.</em></h2>
             <p className="approach-subtitle">{content.approach.subtitle}</p>
             <div className="pillars">
               {content.approach.pillars.map(item => <article className="pillar" key={item.title}>
@@ -95,7 +100,7 @@ export default function Home() {
             <Monogram className="contact-monogram" />
             <div className="contact-copy">
               <p className="eyebrow">Vamos juntos?</p>
-              <h2 id="contact-title">{content.contact.title}</h2>
+              <h2 id="contact-title"><Highlighted text={content.contact.title} highlight={content.contact.highlight} /></h2>
               <p className="contact-description">{content.contact.description}</p>
               <p className="contact-description contact-support">{content.contact.support}</p>
               <ContactButton olive />
@@ -108,7 +113,6 @@ export default function Home() {
         <div className="footer-inner">
           <div className="footer-top">
             <a href="#inicio" className="footer-brand" aria-label="Isabella Oliveira — início"><Image src="/images/logo-isabella.webp" width={971} height={351} alt="Isabella Oliveira — Liderança e Desenvolvimento de Pessoas" unoptimized /></a>
-            <p className="footer-tagline">Liderança que transforma</p>
             <div className="social-links">
               <ConfigurableLink href={siteConfig.instagram} label="Instagram"><Icon name="instagram" /></ConfigurableLink>
             </div>
