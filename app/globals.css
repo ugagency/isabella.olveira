@@ -591,9 +591,15 @@ html { scroll-padding-top: 0; }
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.35) 9%, rgba(0,0,0,.8) 20%, #000 30%); }
 }
 @media (max-width: 979px) {
-  .hero--office .hero-portrait { height: auto; aspect-ratio: 3 / 4.4; width: calc(100% + var(--gutter)); max-height: 46svh; border-radius: 0 0 0 28px;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%), linear-gradient(to bottom, #000 78%, transparent 100%); -webkit-mask-composite: source-in;
-    mask-image: linear-gradient(to right, transparent 0%, #000 22%), linear-gradient(to bottom, #000 78%, transparent 100%); mask-composite: intersect; }
+  /* Celular: foto em cima, em largura total, ocupando o espaço que sobra; texto embaixo */
+  .hero--office .hero-stage { display: flex; flex-direction: column; align-content: normal; padding: 0 var(--gutter) clamp(40px, min(19vw, 8svh), 170px); }
+  .hero--office .hero-portrait { order: 0; flex: 1 1 0; min-height: 26svh; height: auto; max-height: none; aspect-ratio: auto; width: calc(100% + 2 * var(--gutter)); max-width: none; margin: 0 calc(-1 * var(--gutter)) calc(-1 * clamp(20px, 5svh, 56px)); justify-self: auto; border-radius: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
+  .hero--office .eyebrow, .hero--office h1 { position: relative; z-index: 1; text-align: center; }
+  .hero--office .eyebrow { order: 1; }
+  .hero--office h1 { order: 2; font-size: clamp(22px, min(7.6vw, 4.2svh), 46px); }
+  .hero--office .button { order: 3; align-self: center; }
+  .hero--office .hero-description { order: 4; align-self: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
