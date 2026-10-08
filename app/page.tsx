@@ -25,7 +25,7 @@ export default function Home() {
         <section id="inicio" className="hero" aria-labelledby="hero-title">
           <div className="hero-stage">
             <Monogram className="hero-monogram" />
-            <Image src="/images/hero-isabella.webp" width={1004} height={1567} alt="Isabella Oliveira sorrindo, de óculos e camisa verde oliva" className="hero-portrait" preload unoptimized sizes="(max-width: 767px) 100vw, 56vw" />
+            <Image src="/images/hero-isabella.png" width={750} height={1188} alt="Isabella Oliveira sorrindo, de óculos e camisa verde oliva, sentada em uma cadeira" className="hero-portrait" preload unoptimized sizes="(max-width: 767px) 100vw, 56vw" />
             <div className="hero-copy">
               <p className="eyebrow">{content.hero.eyebrow}</p>
               <h1 id="hero-title"><span>Desenvolver pessoas.</span>{" "}<span>Fortalecer <em>lideranças.</em></span>{" "}<span>Construir resultados</span>{" "}<span>que permanecem.</span></h1>
@@ -70,15 +70,18 @@ export default function Home() {
             </div>
             <div className="solutions-list">
               <p className="solutions-description">{content.solutions.description}</p>
-              {content.solutions.items.map(item => <article key={item.id} id={item.id} className="solution-row">
-                <span className="solution-icon"><Icon name={item.icon} /></span>
-                <div><span className="soon-badge">Em breve</span><h3>{item.title}</h3><p>{item.description}</p></div>
-              </article>)}
+              <div className="solutions-items">
+                {content.solutions.items.map(item => <article key={item.id} id={item.id} className="solution-row">
+                  <span className="solution-icon"><Icon name={item.icon} /></span>
+                  <div><span className="soon-badge">Em breve</span><h3>{item.title}</h3><p>{item.description}</p></div>
+                </article>)}
+              </div>
+              <p className="swipe-hint" aria-hidden="true">Deslize para ver mais →</p>
             </div>
           </div>
         </section>
 
-        <section id="minha-abordagem"className="approach" aria-labelledby="approach-title">
+        <section id="minha-abordagem" className="approach" aria-labelledby="approach-title">
           <SectionWave position="top" />
           <div className="approach-inner">
             <p className="eyebrow">Meu método</p>
@@ -91,12 +94,13 @@ export default function Home() {
                 <p>{item.description}</p>
               </article>)}
             </div>
+            <p className="swipe-hint" aria-hidden="true">Deslize para ver mais →</p>
           </div>
         </section>
 
         <section id="contato" className="contact" aria-labelledby="contact-title">
           <div className="contact-stage">
-            <Image src="/images/cta-isabella.webp" width={720} height={800} alt="Isabella Oliveira sorrindo, com camisa verde e celular nas mãos" className="contact-photo" unoptimized sizes="(max-width: 767px) 100vw, 43vw" />
+            <Image src="/images/cta-isabella.png" width={1066} height={1600} alt="Isabella Oliveira sorrindo, de vestido branco e mãos entrelaçadas" className="contact-photo" unoptimized sizes="(max-width: 767px) 100vw, 43vw" />
             <Monogram className="contact-monogram" />
             <div className="contact-copy">
               <p className="eyebrow">Vamos juntos?</p>

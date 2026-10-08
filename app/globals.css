@@ -57,7 +57,8 @@ img { display: block; max-width: 100%; height: auto; }
 
 .hero { position: relative; background: linear-gradient(135deg, #f2eeea, #dfd8d1); overflow: hidden; }
 .hero-stage { position: relative; max-width: 1440px; min-height: 1100px; margin: auto; }
-.hero-portrait { position: absolute; top: -2px; right: 0; width: max(43%, 600px); max-width: none; }
+/* Altura fixa: a Isa tem sempre o mesmo tamanho, qualquer que seja a largura da tela */
+.hero-portrait { position: absolute; top: -2px; right: 0; height: 1000px; width: auto; max-width: none; -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 88%); mask-image: linear-gradient(to bottom, #000 60%, transparent 88%); }
 .hero-monogram { position: absolute; top: 64px; right: -4px; width: 236px; opacity: .46; }
 .hero-copy { position: relative; z-index: 2; margin-left: 8.2%; padding-top: 110px; padding-bottom: 225px; width: 650px; max-width: 45.2%; }
 .hero .eyebrow { font-size: 12px; letter-spacing: 2px; white-space: nowrap; }
@@ -120,7 +121,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .contact { background: linear-gradient(100deg, #fcfbf9 0%, #f6f3ef 30%, #ece7e2 66%, #e0dcda 100%); overflow: hidden; }
 .contact-stage { position: relative; max-width: 1440px; min-height: 680px; margin: auto; }
-.contact-photo { position: absolute; right: 0; top: 0; width: 42.5%; height: 100%; object-fit: cover; object-position: right top; }
+.contact-photo { position: absolute; right: 0; top: 0; width: 42.5%; height: 100%; object-fit: cover; object-position: 50% 22%; -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.12) 5%, rgba(0,0,0,.35) 11%, rgba(0,0,0,.65) 18%, rgba(0,0,0,.9) 26%, #000 34%); mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.12) 5%, rgba(0,0,0,.35) 11%, rgba(0,0,0,.65) 18%, rgba(0,0,0,.9) 26%, #000 34%); }
 .contact-monogram { position: absolute; right: 14px; top: 52px; width: 134px; opacity: .12; }
 .contact-copy { position: relative; z-index: 2; padding: 70px 0 74px; margin-left: 6.25%; width: 765px; max-width: 53.13%; }
 .contact .eyebrow { color: var(--color-olive); }
@@ -153,7 +154,7 @@ img { display: block; max-width: 100%; height: auto; }
   .hero h1 { font-size: clamp(37px, 4.2vw, 48px); }
   .hero .eyebrow { font-size: 10px; letter-spacing: 1.2px; }
   .hero-description { font-size: 17px; width: 88%; }
-  .hero-portrait { top: auto; bottom: -1px; right: auto; left: 53%; width: 47%; }
+  .hero-portrait { top: auto; bottom: -1px; right: 0; left: auto; height: 880px; width: auto; }
   .hero-wave { height: 205px; }
   .hero-monogram { width: 180px; }
   .manifesto { min-height: 595px; }
@@ -249,7 +250,7 @@ img { display: block; max-width: 100%; height: auto; }
   .hero h1 span { display: block; }
   .hero-description { width: auto; max-width: 530px; font-size: 16px; line-height: 1.7; margin-top: 28px; }
   .hero .button { margin-top: 27px; }
-  .hero-portrait { position: relative; top: auto; left: auto; width: 88%; max-width: none; margin: -2px 0 -21% 6%; }
+  .hero-portrait { position: relative; top: auto; left: auto; width: 100%; max-width: none; margin: -2px 0 -21% 0; }
   .hero-stage { display: flex; flex-direction: column; }
   .hero-copy { order: 0; }
   .hero-portrait { order: 1; }
@@ -322,7 +323,7 @@ img { display: block; max-width: 100%; height: auto; }
 @media (min-width: 480px) and (max-width: 767px) {
   .hero-copy { max-width: 590px; margin: auto; width: 100%; }
   .hero h1 span { display: block; }
-  .hero-portrait { width: 68%; margin: 0 0 -16% 26%; }
+  .hero-portrait { width: 80%; margin: 0 0 -16% 14%; }
   .hero-monogram { right: 8%; bottom: 360px; }
   .hero-wave { height: 170px; }
   .about-photos { height: 640px; }
@@ -366,9 +367,9 @@ img { display: block; max-width: 100%; height: auto; }
 @media (max-width: 979px) {
   .header-inner { gap: 12px; }
   .brand { width: min(192px, 62vw); flex-shrink: 1; }
-  .hero-stage { display: grid; grid-template-columns: minmax(0, 1fr) 46%; column-gap: 12px; align-content: start; min-height: 0; padding: clamp(32px, 6vw, 56px) var(--gutter) clamp(80px, 19vw, 170px); }
+  .hero-stage { display: grid; grid-template-columns: minmax(0, 1fr) 50%; column-gap: 12px; align-content: start; min-height: 0; padding: clamp(32px, 6vw, 56px) var(--gutter) clamp(80px, 19vw, 170px); }
   .hero-copy { display: contents; }
-  .hero-portrait { position: static; float: none; order: 0; grid-column: 2; grid-row: 1 / span 2; align-self: start; width: calc(100% + var(--gutter)); max-width: none; margin: 0 calc(-1 * var(--gutter)) 0 0; -webkit-mask-image: linear-gradient(to bottom, #000 66%, transparent 98%); mask-image: linear-gradient(to bottom, #000 66%, transparent 98%); }
+  .hero-portrait { position: static; float: none; order: 0; grid-column: 2; grid-row: 1 / span 2; align-self: start; height: auto; width: calc(100% + var(--gutter)); max-width: none; margin: 0 calc(-1 * var(--gutter)) 0 0; -webkit-mask-image: linear-gradient(to bottom, #000 66%, transparent 98%); mask-image: linear-gradient(to bottom, #000 66%, transparent 98%); }
   .hero .eyebrow { grid-column: 1; grid-row: 1; white-space: normal; max-width: none; font-size: clamp(8px, 2.1vw, 12px); letter-spacing: 1px; line-height: 1.7; }
   .hero h1 { grid-column: 1; grid-row: 2; margin-top: clamp(14px, 3vw, 24px); font-size: clamp(21px, 5.7vw, 46px); line-height: 1.2; letter-spacing: -.3px; }
   .hero-description { grid-column: 1 / -1; grid-row: 4; width: 100%; max-width: 560px; justify-self: center; text-align: center; margin-top: clamp(16px, 3.5vw, 26px); font-size: clamp(13px, 2.6vw, 17px); line-height: 1.6; }
@@ -384,17 +385,200 @@ img { display: block; max-width: 100%; height: auto; }
   .contact-support { margin-top: 12px; }
   .contact .button { min-width: 0; min-height: 46px; margin-top: clamp(18px, 3.5vw, 28px); padding: 12px 16px; gap: 10px; font-size: 10px; white-space: nowrap; }
   .contact .button svg { width: 20px; height: 20px; }
-  .contact-photo { order: 0; position: absolute; top: 0; right: 0; bottom: auto; width: 56%; height: 100%; margin: 0; object-fit: cover; object-position: 20% top; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 clamp(28px, 8vw, 64px)), linear-gradient(to right, transparent, #000 15%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent, #000 clamp(28px, 8vw, 64px)), linear-gradient(to right, transparent, #000 15%); mask-composite: intersect; }
+  .contact-photo { order: 0; position: absolute; top: 0; right: 0; bottom: auto; width: 54%; height: 100%; margin: 0; object-fit: cover; object-position: 50% top; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 clamp(14px, 4vw, 30px)), linear-gradient(to right, transparent, #000 25%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent, #000 clamp(14px, 4vw, 30px)), linear-gradient(to right, transparent, #000 25%); mask-composite: intersect; }
   .contact-monogram { top: 18px; right: 12px; bottom: auto; width: clamp(56px, 12vw, 120px); }
 }
 
 @media (max-width: 360px) {
-  .contact-photo { width: 60%; object-position: 40% top; }
+  .contact-photo { width: 52%; }
 }
 
 @media (max-width: 340px) {
   .hero .button, .contact .button { white-space: normal; min-height: 44px; }
   .hero .button svg, .contact .button svg { display: none; }
+}
+
+/* ==========================================================================
+   Barra do topo fina + cada seção ocupa exatamente uma tela
+   (o hero divide a primeira tela só com a barra do topo)
+   ========================================================================== */
+:root { --header-h: 76px; --screen: 100vh; }
+@supports (height: 100svh) { :root { --screen: 100svh; } }
+html { scroll-padding-top: 0; }
+
+.header-inner { height: var(--header-h); }
+.brand { width: 140px; }
+.header-contact .button { min-width: 0; min-height: 44px; padding: 10px 18px; gap: 14px; }
+.header-contact .button svg { width: 20px; height: 20px; }
+
+/* As ondas ficam dentro da própria seção, sem invadir a vizinha */
+.section-wave { height: clamp(36px, 7svh, 100px); }
+.wave-top, .approach .wave-top { top: -1px; transform: scaleY(-1); color: var(--color-paper); }
+.swipe-hint { display: none; }
+
+/* Hero */
+.hero-stage { min-height: calc(var(--screen) - var(--header-h)); }
+
+/* Manifesto */
+.manifesto { min-height: var(--screen); display: flex; align-items: center; justify-content: center; padding-block: clamp(28px, 7svh, 90px); }
+.manifesto-inner { width: 100%; }
+.manifesto-monogram { width: clamp(40px, 8svh, 76px); margin-bottom: clamp(14px, 3svh, 28px); }
+.manifesto h2 { margin-top: clamp(16px, 4svh, 37px); font-size: clamp(22px, min(2.4vw, 4.6svh), 34px); }
+.manifesto-description { margin-top: clamp(16px, 4svh, 37px); font-size: clamp(14px, min(1.4vw, 2.7svh), 20px); }
+
+/* Sobre mim */
+.about-inner { min-height: var(--screen); align-items: center; padding-block: clamp(56px, 12svh, 120px); }
+
+/* Soluções */
+.solutions { min-height: var(--screen); display: flex; align-items: center; padding-block: clamp(32px, 8svh, 100px); }
+.solutions-inner { width: 100%; min-height: 0; align-items: center; }
+.solutions-heading h2 { font-size: clamp(30px, min(3.4vw, 6svh), 49px); }
+.solutions-description { font-size: clamp(15px, 2.6svh, 20px); margin-bottom: clamp(16px, 4svh, 63px); }
+.solution-row { grid-template-columns: clamp(52px, 9svh, 84px) 1fr; padding-block: clamp(10px, 2.6svh, 25px); }
+.solution-icon { width: clamp(52px, 9svh, 84px); height: clamp(52px, 9svh, 84px); }
+.solution-icon svg { width: 52%; height: 52%; }
+.solution-row h3 { font-size: clamp(19px, 3.1svh, 24px); }
+.solution-row p { font-size: clamp(14.5px, 2.4svh, 18.5px); }
+
+/* Minha abordagem */
+.approach { min-height: var(--screen); display: flex; align-items: center; padding-block: clamp(56px, 11svh, 110px); }
+.approach-inner { width: 100%; }
+.approach h2 { font-size: clamp(34px, min(3.8vw, 7svh), 55px); }
+.approach-subtitle { font-size: clamp(15px, 2.8svh, 22px); margin-top: clamp(10px, 2.6svh, 25px); }
+.pillars { margin-top: clamp(24px, 7svh, 71px); }
+.pillar { min-height: 0; }
+.pillar-icon { width: clamp(56px, 10svh, 84px); height: clamp(56px, 10svh, 84px); margin-bottom: clamp(14px, 3svh, 32px); }
+.pillar-icon svg { width: 57%; height: 57%; }
+.pillar h3 { font-size: clamp(19px, 3.3svh, 25px); }
+.pillar p { font-size: clamp(14.5px, 2.5svh, 19px); margin-top: clamp(10px, 2.4svh, 24px); }
+
+/* Vamos juntos? */
+.contact-stage { min-height: var(--screen); display: flex; align-items: center; }
+.contact-copy { padding-block: clamp(32px, 8svh, 74px); }
+
+/* Computador e tablet deitado */
+@media (min-width: 980px) {
+  .hero-stage { display: flex; align-items: center; padding-bottom: clamp(60px, 13svh, 200px); }
+  .hero-copy { padding-block: clamp(8px, 2svh, 40px); }
+  /* A Isa fica logo depois do texto: o tamanho segue a altura da tela, mas nunca
+     passa do espaço livre ao lado do texto (telas muito altas, como 4K) */
+  .hero-stage {
+    --stage-w: min(100vw, 1440px);
+    --copy-end: calc(var(--stage-w) * .082 + min(650px, var(--stage-w) * .452));
+    --photo-room: calc(var(--stage-w) - var(--copy-end) - 24px);
+    --photo-h: min(calc((var(--screen) - var(--header-h)) * 1.12), calc(var(--photo-room) / .631));
+  }
+  .hero-copy { width: min(650px, 45.2%); max-width: none; }
+  .hero-portrait { left: calc(var(--copy-end) + 24px); right: auto; bottom: auto; top: max(0px, calc((var(--screen) - var(--header-h) - var(--photo-h)) / 2)); height: var(--photo-h); width: auto; }
+  .hero-monogram { top: clamp(24px, 6svh, 64px); width: clamp(120px, 22svh, 236px); }
+  .hero .eyebrow { font-size: clamp(10px, 1.7svh, 12px); }
+  .hero h1 { margin-top: clamp(12px, 3svh, 30px); font-size: clamp(30px, min(4.167vw, 5.8svh), 60px); }
+  .hero-description { margin-top: clamp(12px, 3.6svh, 38px); font-size: clamp(14px, min(1.459vw, 2.4svh), 21px); width: 90%; }
+  .hero .button { margin-top: clamp(16px, 3.5svh, 34px); }
+  .hero-wave { height: clamp(60px, 13svh, 200px); }
+  .contact h2 { font-size: clamp(28px, min(3.056vw, 6svh), 44px); }
+  .contact-description { font-size: clamp(15px, min(1.4vw, 2.7svh), 20px); }
+  .solutions-description { font-size: clamp(15px, min(1.6vw, 2.6svh), 20px); }
+  .solutions-heading h2 { font-size: clamp(30px, min(3.4vw, 5.6svh), 49px); }
+  .solution-row h3 { font-size: clamp(18px, min(1.9vw, 3.1svh), 24px); }
+  .solution-row p { font-size: clamp(14px, min(1.45vw, 2.4svh), 18.5px); }
+  .pillar h3 { font-size: clamp(18px, min(2vw, 3.3svh), 25px); }
+  .pillar p { font-size: clamp(14px, min(1.5vw, 2.5svh), 19px); }
+}
+
+/* Sobre mim com fotos ao lado do texto: o tamanho das fotos segue a altura da tela */
+@media (min-width: 980px) {
+  .about-inner { --about-h: clamp(360px, 70svh, 746px); }
+  .about-photos { height: var(--about-h); min-height: 0; width: calc(var(--about-h) * 680 / 746); max-width: 100%; justify-self: end; }
+  .about-main-photo { left: 32.94%; width: 66.62%; }
+  .about-reading-photo { left: 2.65%; top: 45.6%; width: 42.35%; }
+  .script-words { font-size: calc(var(--about-h) * .0496); }
+  .about-copy { padding-top: 0; }
+  .about h2 { font-size: clamp(32px, min(3.75vw, 6.4svh), 54px); }
+  .about-copy > p:not(.eyebrow) { margin-top: clamp(16px, 4svh, 38px); font-size: clamp(15px, min(1.459vw, 2.6svh), 21px); }
+}
+
+/* Celular e tablet em pé */
+@media (max-width: 979px) {
+  :root { --header-h: 64px; }
+  .header-inner { padding: 0 20px; }
+  .brand { width: min(118px, 40vw); }
+  .menu-toggle { width: 42px; height: 42px; }
+  /* Hero no celular: texto 58% / foto 42%, e tudo limitado pela altura da tela */
+  .hero-stage { align-content: center; grid-template-columns: minmax(0, 1fr) 42%; padding-top: clamp(14px, min(6vw, 3svh), 56px); padding-bottom: clamp(48px, min(19vw, 10svh), 170px); }
+  .hero-wave { height: clamp(44px, min(16vw, 9svh), 200px); }
+  .hero-portrait { justify-self: end; width: auto; max-width: calc(100% + var(--gutter)); height: min(40svh, calc((42vw + var(--gutter)) * 1.584)); }
+  .hero h1 { font-size: clamp(18px, min(5.2vw, 3.4svh), 46px); }
+  .hero-description { font-size: clamp(12px, min(2.6vw, 2.2svh), 17px); }
+  .contact-copy { padding-block: clamp(20px, 4.5svh, 60px); }
+  /* Foto apoiada na base da seção, sem cortar a Isa */
+  .contact-stage { flex-direction: row; }
+  .contact h2 { font-size: clamp(18px, min(5.2vw, 3.4svh), 39px); }
+  .contact-description { font-size: clamp(11px, min(2.45vw, 2.15svh), 18px); line-height: 1.5; margin-top: clamp(8px, 1.8svh, 24px); }
+  .contact-copy { width: 52%; }
+  /* Foto em altura total ao lado do texto, com a mistura suave no lado esquerdo */
+  .contact-photo { top: 0; bottom: auto; width: 62%; height: 100%; object-fit: cover; object-position: 50% 0; -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.12) 5%, rgba(0,0,0,.35) 11%, rgba(0,0,0,.65) 18%, rgba(0,0,0,.9) 26%, #000 34%); mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,.12) 5%, rgba(0,0,0,.35) 11%, rgba(0,0,0,.65) 18%, rgba(0,0,0,.9) 26%, #000 34%); -webkit-mask-composite: source-over; mask-composite: add; }
+}
+
+/* Tablet em pé: Sobre mim e Soluções empilhados, abordagem em 2x2 */
+@media (min-width: 768px) and (max-width: 979px) {
+  .about-inner { --about-h: clamp(240px, 38svh, 560px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding: clamp(56px, 8svh, 90px) var(--gutter); }
+  .about-copy { display: contents; }
+  .about-inner .eyebrow, .about h2, .about-copy > p:not(.eyebrow) { width: 100%; max-width: 640px; }
+  .about-inner .eyebrow { order: 0; }
+  .about h2 { order: 1; margin-top: 16px; font-size: clamp(32px, min(6vw, 4.6svh), 48px); }
+  .about-photos { order: 2; height: var(--about-h); min-height: 0; width: calc(var(--about-h) * .826); margin-top: 24px; }
+  .about-copy > p:not(.eyebrow) { order: 3; margin-top: 24px; font-size: clamp(15px, 2svh, 18px); }
+  .about-main-photo { left: 34%; width: 66%; top: 4.5%; }
+  .about-reading-photo { left: 0; top: auto; bottom: 0; width: 47%; }
+  .script-words { display: block; top: 6%; left: 1px; font-size: calc(var(--about-h) * .052); }
+  .script-words i { display: block; width: 35px; margin: 20px 0 0 5px; }
+  .solutions-inner { display: block; max-width: 680px; margin: auto; }
+  .solutions-heading h2 { margin-top: 16px; max-width: none; font-size: clamp(30px, min(5vw, 4.4svh), 42px); }
+  .solutions-description { margin-top: 20px; margin-bottom: 20px; font-size: 17px; }
+  .pillar-icon { width: 64px; height: 64px; margin-bottom: 16px; }
+  .pillar h3 { font-size: 21px; }
+  .pillar p { font-size: 16px; }
+}
+
+/* Celular: tudo compacto e os cards viram carrossel de deslizar */
+@media (max-width: 767px) {
+  .manifesto { padding: clamp(20px, 5svh, 60px) 25px; }
+  .manifesto h2 { font-size: clamp(18px, min(5.6vw, 3.1svh), 27px); line-height: 1.36; }
+  .manifesto-description { font-size: clamp(13px, min(3.9vw, 2.1svh), 16px); line-height: 1.6; }
+
+  .about-inner { --about-h: clamp(150px, 32svh, 560px); padding: clamp(40px, 7svh, 90px) 25px; justify-content: center; }
+  .about h2 { margin-top: clamp(8px, 1.6svh, 20px); font-size: clamp(24px, min(8vw, 4.6svh), 48px); }
+  .about-photos { height: var(--about-h); width: calc(var(--about-h) * .826); max-width: 100%; margin: clamp(14px, 3svh, 40px) 0 0; }
+  .about-main-photo { left: 34%; width: 66%; top: 4.5%; }
+  .about-reading-photo { left: 0; top: auto; bottom: 0; width: 47%; }
+  .script-words { top: 6%; font-size: calc(var(--about-h) * .052); }
+  .about-copy > p:not(.eyebrow) { margin-top: clamp(12px, 2.6svh, 28px); font-size: clamp(12.5px, min(3.8vw, 2.05svh), 16px); line-height: 1.6; }
+
+  .solutions { padding: clamp(24px, 5svh, 60px) 25px; }
+  .solutions-heading h2 { margin-top: clamp(8px, 1.6svh, 25px); font-size: clamp(20px, min(7vw, 3.7svh), 35px); line-height: 1.22; }
+  .solutions-description { margin-top: clamp(10px, 2svh, 35px); margin-bottom: clamp(12px, 2.4svh, 32px); font-size: clamp(13px, min(3.8vw, 2.1svh), 16px); line-height: 1.6; }
+
+  .solutions-items, .pillars { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 25px; margin-inline: -25px; padding: 2px 25px 6px; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .solutions-items::-webkit-scrollbar, .pillars::-webkit-scrollbar { display: none; }
+  .solution-row, .pillar, .pillar + .pillar, .pillar:first-child, .solution-row:first-of-type { flex: 0 0 84%; scroll-snap-align: start; border: 1px solid var(--line) !important; border-radius: 20px; padding: clamp(14px, 2.6svh, 28px) 18px; background: #f6f3ef80; }
+  /* Card compacto: ícone ao lado do título, descrição embaixo */
+  .solution-row { grid-template-columns: 44px 1fr; column-gap: 12px; row-gap: 0; align-items: center; }
+  .solution-row > div { display: contents; }
+  .solution-icon { grid-column: 1; grid-row: 1 / span 2; width: 44px; height: 44px; align-self: center; }
+  .soon-badge { grid-column: 2; grid-row: 1; justify-self: start; margin-bottom: 4px; }
+  .solution-row h3 { grid-column: 2; grid-row: 2; font-size: clamp(16px, 2.6svh, 21px); line-height: 1.3; }
+  .solution-row p { grid-column: 1 / -1; grid-row: 3; margin-top: 10px; font-size: clamp(13px, 2svh, 15px); line-height: 1.55; }
+
+  .approach { padding: clamp(44px, 9svh, 90px) 25px; }
+  .approach h2 { margin-top: clamp(8px, 1.6svh, 20px); font-size: clamp(30px, min(9vw, 5svh), 39px); }
+  .approach-subtitle { font-size: clamp(14px, 2.1svh, 16px); }
+  .pillars { margin-top: clamp(14px, 3svh, 44px); }
+  .pillar-icon { width: 60px; height: 60px; margin-bottom: 16px; }
+  .pillar h3 { font-size: clamp(20px, 3svh, 25px); }
+  .pillar p { font-size: clamp(14px, 2.1svh, 16px); margin-top: 12px; }
+
+  .swipe-hint { display: block; margin-top: clamp(8px, 1.6svh, 14px); color: var(--color-caramel); font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
