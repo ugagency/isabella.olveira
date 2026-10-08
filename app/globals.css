@@ -582,7 +582,7 @@ html { scroll-padding-top: 0; }
 }
 
 /* Teste: hero com a foto da Isa no escritório (foto com fundo, em painel à direita) */
-.hero--office .hero-monogram { display: none; }
+.hero--office .hero-monogram { z-index: 1; }
 .hero--office .hero-portrait { object-fit: cover; object-position: 50% 12%; }
 @media (min-width: 980px) {
   /* Painel do fim do texto até a borda da tela, na altura toda do hero */
