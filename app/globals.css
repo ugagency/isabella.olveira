@@ -583,6 +583,10 @@ html { scroll-padding-top: 0; }
 
 /* Teste: hero com a foto da Isa no escritório (foto com fundo, em painel à direita) */
 .hero--office .hero-monogram { z-index: 1; }
+@media (min-width: 980px) {
+  /* Monograma no canto superior direito da foto (acima da estante), longe do rosto, em qualquer resolução */
+  .hero--office .hero-monogram { top: clamp(20px, 5svh, 56px); right: calc(-1 * max(0px, (100vw - 1440px) / 2) + 18px); width: clamp(72px, min(13svh, 8vw), 150px); opacity: .5; }
+}
 .hero--office .hero-portrait { object-fit: cover; object-position: 50% 12%; }
 @media (min-width: 980px) {
   /* Painel do fim do texto até a borda da tela, na altura toda do hero */
