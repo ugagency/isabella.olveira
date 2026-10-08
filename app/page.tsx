@@ -22,10 +22,10 @@ export default function Home() {
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <Header />
       <main id="conteudo">
-        <section id="inicio" className="hero" aria-labelledby="hero-title">
+        <section id="inicio" className="hero hero--office" aria-labelledby="hero-title">
           <div className="hero-stage">
             <Monogram className="hero-monogram" />
-            <Image src="/images/hero-isabella.png" width={750} height={1188} alt="Isabella Oliveira sorrindo, de óculos e camisa verde oliva, sentada em uma cadeira" className="hero-portrait" preload unoptimized sizes="(max-width: 767px) 100vw, 56vw" />
+            <Image src="/images/hero-escritorio.webp" width={996} height={1578} alt="Isabella Oliveira sorrindo, de óculos e camisa verde oliva, sentada em uma cadeira em seu escritório" className="hero-portrait" preload unoptimized sizes="(max-width: 767px) 100vw, 56vw" />
             <div className="hero-copy">
               <p className="eyebrow">{content.hero.eyebrow}</p>
               <h1 id="hero-title"><span>Desenvolver pessoas.</span>{" "}<span>Fortalecer <em>lideranças.</em></span>{" "}<span>Construir resultados</span>{" "}<span>que permanecem.</span></h1>
